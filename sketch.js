@@ -16,7 +16,8 @@ function setup() {
 	rectMode(CENTER);
 	
 	boxPosition=width/2-100 boxY=610;
-	boxleftSprite=createSprite(boxPosition, boxY, 20,100);
+	boxleftSprite=createSprite(boxPosition, 
+				   boxY, 6,10);
 	boxleftSprite.shapeColor=color(255,0,0);
 	boxLeftBody = Bodies.rectangle(boxPosition+20, boxY, 20,100 , {isStatic:true} ); World.add(world, boxLeftBody);
 	boxBase=createSprite(boxPosition+100, boxY+40, 200,20);
@@ -44,7 +45,7 @@ function setup() {
 	engine = Engine.create();
 	world = engine.world;
 
-	packageBody = Bodies.circle(width/2 , 200 , 5 , {restitution:3, isStatic:true});
+	packageBody = Bodies.circle(width/2 , 200 , 5 , {restitution:0.8, isStatic:true});
 	World.add(world, packageBody);
 	
 
@@ -54,7 +55,7 @@ function setup() {
 	
 	
 	 //Create a Box
-	 Box = Bodies.rectangle(100,200,20,20 {isStatic:true} );
+	 Box = Bodies.rectangle(100,200,20,20, {isStatic:true} );
 	 Box.shapeColor ="red";
 
 

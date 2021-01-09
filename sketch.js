@@ -16,9 +16,10 @@ function setup() {
 	rectMode(CENTER);
 	 Engine.create(); world = engine.world;
 	
-	boxPosition=width/2-100 boxY=610;
-	boxleftSprite=createSprite(boxPosition, 
-				   boxY, 20,100);
+	
+	boxPosition=width/2-100 
+	boxY=610;
+	boxleftSprite=createSprite(boxPosition,boxY, 20,100);
 	boxleftSprite.shapeColor=color(255,0,0);
 	boxLeftBody = Bodies.rectangle(boxPosition+20, boxY, 20,100 , {isStatic:true} ); World.add(world, boxLeftBody);
 	boxBase=createSprite(boxPosition+100, boxY+40, 200,20);

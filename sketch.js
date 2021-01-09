@@ -14,10 +14,11 @@ function preload()
 function setup() {
 	createCanvas(800, 700);
 	rectMode(CENTER);
+	 Engine.create(); world = engine.world;
 	
 	boxPosition=width/2-100 boxY=610;
 	boxleftSprite=createSprite(boxPosition, 
-				   boxY, 6,10);
+				   boxY, 20,100);
 	boxleftSprite.shapeColor=color(255,0,0);
 	boxLeftBody = Bodies.rectangle(boxPosition+20, boxY, 20,100 , {isStatic:true} ); World.add(world, boxLeftBody);
 	boxBase=createSprite(boxPosition+100, boxY+40, 200,20);
@@ -91,7 +92,7 @@ function keyPressed() {
 
     
   }
-}
+
 
 
 
